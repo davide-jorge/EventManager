@@ -20,6 +20,8 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Optional;
 
 public class AdminController {
@@ -141,7 +143,14 @@ public class AdminController {
         emailLabel.setText(user.getEmail());
         phoneLabel.setText(user.getPhone());
         dateCreatedLabel.setText(user.getCreatedDate());
-        lastLoginLabel.setText(user.getLastLogin());
+        // Format and display last login date
+        if (user.getLastLogin() != null) {
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String formattedDate = dateFormat.format(user.getLastLogin());
+            lastLoginLabel.setText(formattedDate);
+        } else {
+            lastLoginLabel.setText("No login record");
+        }
     }
 
     private void populateEventDetails(Event event) {

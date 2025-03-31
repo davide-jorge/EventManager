@@ -1,11 +1,11 @@
 package dk.easv.eventmanager.bll;
 
-import dk.easv.eventmanager.PasswordUtils;
+import dk.easv.eventmanager.utils.PasswordUtils;
 import dk.easv.eventmanager.be.User;
 import dk.easv.eventmanager.dal.web.UserDAO;
 import javafx.collections.ObservableList;
 
-import static dk.easv.eventmanager.PasswordUtils.hashPassword;
+import static dk.easv.eventmanager.utils.PasswordUtils.hashPassword;
 
 public class UserManager {
     private final UserDAO userDAO;

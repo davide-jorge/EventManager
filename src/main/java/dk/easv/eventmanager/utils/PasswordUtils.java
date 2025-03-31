@@ -1,4 +1,4 @@
-package dk.easv.eventmanager;
+package dk.easv.eventmanager.utils;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
